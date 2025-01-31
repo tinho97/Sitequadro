@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUADRO PROD - Zona Norte RJ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Menu de Navegação -->
+  <nav>
+    <div class="logo">
+      <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">QUADRO</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Início</a></li>
+      <li><a href="#about">Sobre Nós</a></li>
+      <li><a href="#portfolio">Nossos Projetos</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#contact">Fale com a Quadro</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content reveal">
+      <h1>Criamos histórias que emocionam e conectam</h1>
+      <p>Produtora audiovisual independente na Zona Norte do Rio de Janeiro</p>
+      <a href="#portfolio" class="btn">Conheça nossos projetos</a>
+      <a href="#contact" class="btn btn-secondary">Solicite um orçamento</a>
+    </div>
+  </section>
+
+  <!-- Seção Sobre Nós -->
+  <section id="about" class="about">
+    <h2 class="reveal">Sobre Nós</h2>
+    <p class="reveal">Somos uma produtora audiovisual independente localizada na Zona Norte do Rio de Janeiro. Com uma equipe apaixonada por contar histórias, ajudamos marcas e pessoas a se conectarem com seu público através de vídeos criativos e impactantes.</p>
+    <div class="team">
+      <div class="team-member reveal">
+        <img src="Imagens/58-IMG_8641.jpg" alt="Membro da Equipe 1">
+        <h3>Victor Figueiredo</h3>
+        <p>Diretor Criativo</p>
+      </div>
+      <div class="team-member reveal">
+        <img src="Imagens/59-IMG_8642.jpg" alt="Membro da Equipe 2">
+        <h3>Lucas Vilarinho</h3>
+        <p>Produtora Executiva</p>
+      </div>
+      <div class="team-member reveal">
+        <img src="Imagens/Equipe/Guima.png" alt="Membro da Equipe 2">
+        <h3>Rômulo Guimarães</h3>
+        <p>Produtora Executiva</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Portfólio -->
+<section id="portfolio" class="portfolio">
+  <div class="carousel reveal">
+    <!-- Projeto 1 -->
+    <div class="project active reveal" id="project1">
+      <div class="carousel-images">
+        <img src="Imagens/Glorioso Eterno Fotos/1.jpg" alt="Glorioso Eterno - Foto 1" class="active">
+        <img src="Imagens/Glorioso Eterno Fotos/2.jpg" alt="Glorioso Eterno - Foto 2">
+        <img src="Imagens/Glorioso Eterno Fotos/3.jpg" alt="Glorioso Eterno - Foto 3">
+        <img src="Imagens/Glorioso Eterno Fotos/4.jpg" alt="Glorioso Eterno - Foto 4">
+        <img src="Imagens/Glorioso Eterno Fotos/5.jpg" alt="Glorioso Eterno - Foto 5">
+        <img src="Imagens/Glorioso Eterno Fotos/6.jpg" alt="Glorioso Eterno - Foto 6">
+      </div>
+      <div class="project-info reveal">
+        <h2>Glorioso Eterno</h2>
+        <p>Descrição do Projeto 1.</p>
+      </div>
+    </div>
+
+    <!-- Projeto 2 -->
+    <div class="project reveal" id="project2">
+      <div class="carousel-images">
+        <img src="Imagens/1943 Fotos/1.jpg" alt="1943 - Foto 1" class="active">
+        <img src="Imagens/1943 Fotos/2.jpg" alt="1943 - Foto 2">
+        <img src="Imagens/1943 Fotos/3.jpg" alt="1943 - Foto 3">
+        <img src="Imagens/1943 Fotos/4.jpg" alt="1943 - Foto 4">
+        <img src="Imagens/1943 Fotos/5.jpg" alt="1943 - Foto 5">
+        <img src="Imagens/1943 Fotos/6.jpg" alt="1943 - Foto 6">
+        <!-- Adicione mais 7 imagens aqui -->
+      </div>
+      <div class="project-info reveal">
+        <h2>1943</h2>
+        <p>Descrição do Projeto 2.</p>
+      </div>
+    </div>
+
+    <!-- Setas de Navegação -->
+    <button class="arrow prev" onclick="prevProject()">&#10094;</button>
+    <button class="arrow next" onclick="nextProject()">&#10095;</button>
+  </div>
+</section>
+
+  <!-- Seção Serviços -->
+  <section id="services" class="services">
+    <h2 class="reveal">Serviços</h2>
+    <div class="service-list">
+      <div class="service-item reveal">
+        <h3>Vídeos Institucionais</h3>
+        <p>Conte a história da sua empresa de forma impactante.</p>
+      </div>
+      <div class="service-item reveal">
+        <h3>Comerciais</h3>
+        <p>Criação de comerciais para TV e redes sociais.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Seção Contato -->
+<section id="contact" class="contact">
+  <h2>Contato</h2>
+  <form action="https://formspree.io/f/xjkgryjo" method="POST" onsubmit="handleSubmit(event)">
+    <input type="text" name="name" id="name" placeholder="Seu nome" required>
+    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+    <textarea name="message" id="message" placeholder="Sua mensagem" required></textarea>
+    <button type="submit" name="email">Enviar por E-mail</button>
+    <button type="submit" name="whatsapp">Enviar por WhatsApp</button>
+  </form>
+
+  
+
+  <!-- Links para Redes Sociais e E-mail -->
+  <div class="social-title">
+
+    <h1>Siga a Quadro nas Redes</h1>
+  </div>
+  <div class="social-links">
+    <a href="https://www.youtube.com/@quadroprod" target="_blank" class="social-icon">
+      <i class="fab fa-youtube"></i> <!-- Ícone do YouTube -->
+      <span>Youtube</span>
+    </a>
+    <a href="https://www.instagram.com/quadroprod" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.tiktok.com/@quadroprod" target="_blank" class="social-icon">
+      <i class="fab fa-tiktok"></i> <!-- Ícone do TikTok -->
+      <span>Tiktok</span>
+    </a>
+  </div>
+</section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 QUADROPROD. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Link para o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
