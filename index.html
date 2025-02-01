@@ -5,27 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QUADRO PROD - Zona Norte RJ</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Menu de Navegação -->
   <nav>
     <div class="logo">
-      <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">QUADRO</h1>
+      <h1 class="logotipo">QUADRO</h1>
     </div>
-    <ul class="nav-links">
+    <div class="menu-icon" id="menuIcon">
+      <span>&#9776;</span> <!-- Ícone de menu hambúrguer -->
+    </div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Início</a></li>
       <li><a href="#about">Sobre Nós</a></li>
       <li><a href="#portfolio">Nossos Projetos</a></li>
       <li><a href="#services">Serviços</a></li>
       <li><a href="#contact">Fale com a Quadro</a></li>
+      <li><a href="#end"> </a></li>
     </ul>
   </nav>
 
   <!-- Seção Hero -->
   <section id="home" class="hero">
     <div class="hero-content reveal">
-      <h1>Criamos histórias que emocionam e conectam você</h1>
+      <img src="Imagens/logo 300px.png" alt="Quadro logo" style="padding-left: 2px;">
+      <h1 class="logotipo">QUADRO</h1>
+      <h2>Criamos histórias que emocionam e conectam você</h2>
       <p>Produtora audiovisual independente na Zona Norte do Rio de Janeiro</p>
       <a href="#portfolio" class="btn">Conheça nossos projetos</a>
       <a href="#contact" class="btn btn-secondary">Solicite um orçamento</a>
@@ -35,7 +44,7 @@
   <!-- Seção Sobre Nós -->
   <section id="about" class="about">
     <h2 class="reveal">Sobre Nós</h2>
-    <p class="reveal">Somos uma produtora audiovisual independente localizada na Zona Norte do Rio de Janeiro. Com uma equipe apaixonada por contar histórias, ajudamos marcas e pessoas a se conectarem com seu público através de vídeos criativos e impactantes.</p>
+    <p class="reveal">Somos uma produtora audiovisual independente do Rio de Janeiro com a missão de transmitir, por meio da imagem, o sentimento. Com uma equipe apaixonada por contar histórias, ajudamos marcas e pessoas a se conectarem com seu público através de vídeos criativos e impactantes.</p>
     <div class="team">
       <div class="team-member reveal">
         <img src="Imagens/Equipe/Victor.png" alt="Membro da Equipe 1">
@@ -55,45 +64,72 @@
     </div>
   </section>
 
-  <!-- Seção Portfólio -->
+<!-- Seção Portfólio -->
 <section id="portfolio" class="portfolio">
   <div class="carousel reveal">
-    <!-- Projeto 1 -->
-    <div class="project active reveal" id="project1">
-      <div class="carousel-images">
-        <img src="Imagens/Glorioso Eterno Fotos/1.jpg" alt="Glorioso Eterno - Foto 1" class="active">
-        <img src="Imagens/Glorioso Eterno Fotos/2.jpg" alt="Glorioso Eterno - Foto 2">
-        <img src="Imagens/Glorioso Eterno Fotos/3.jpg" alt="Glorioso Eterno - Foto 3">
-        <img src="Imagens/Glorioso Eterno Fotos/4.jpg" alt="Glorioso Eterno - Foto 4">
-        <img src="Imagens/Glorioso Eterno Fotos/5.jpg" alt="Glorioso Eterno - Foto 5">
-        <img src="Imagens/Glorioso Eterno Fotos/6.jpg" alt="Glorioso Eterno - Foto 6">
+    <!-- Imagens do Carrossel -->
+    <div class="carousel-images">
+      <!-- Imagem 1 -->
+      <div class="carousel-item active reveal">
+        <img src="Imagens/Glorioso Eterno Fotos/1.jpg" alt="Projeto 1 - Foto 1">
+        <div class="carousel-text">
+          <h2>Glorioso Eterno</h2>
+        </div>
       </div>
-      <div class="project-info reveal">
-        <h2>Glorioso Eterno</h2>
-        <p>Descrição do Projeto 1.</p>
+      <!-- Imagem 2 -->
+      <div class="carousel-item">
+        <img src="Imagens/Glorioso Eterno Fotos/2.jpg" alt="Projeto 1 - Foto 2">
+        <div class="carousel-text">
+          <h2>Glorioso Eterno</h2>
+        </div>
       </div>
-    </div>
-
-    <!-- Projeto 2 -->
-    <div class="project reveal" id="project2">
-      <div class="carousel-images">
-        <img src="Imagens/1943 Fotos/1.jpg" alt="1943 - Foto 1" class="active">
-        <img src="Imagens/1943 Fotos/2.jpg" alt="1943 - Foto 2">
-        <img src="Imagens/1943 Fotos/3.jpg" alt="1943 - Foto 3">
-        <img src="Imagens/1943 Fotos/4.jpg" alt="1943 - Foto 4">
-        <img src="Imagens/1943 Fotos/5.jpg" alt="1943 - Foto 5">
-        <img src="Imagens/1943 Fotos/6.jpg" alt="1943 - Foto 6">
-        <!-- Adicione mais 7 imagens aqui -->
+      <!-- Imagem 3 -->
+      <div class="carousel-item">
+        <img src="Imagens/1943 Fotos/1.jpg" alt="Projeto 1 - Foto 3">
+        <div class="carousel-text">
+          <h2>1943</h2>
+        </div>
       </div>
-      <div class="project-info reveal">
-        <h2>1943</h2>
-        <p>Descrição do Projeto 2.</p>
+       <!-- Imagem 4 -->
+      <div class="carousel-item">
+        <img src="Imagens/1943 Fotos/2.jpg" alt="Projeto 1 - Foto 4">
+        <div class="carousel-text">
+          <h2>1943</h2>
+        </div>
+      </div>
+       <!-- Imagem 5 -->
+      <div class="carousel-item">
+        <img src="Imagens/Glorioso Eterno Fotos/3.jpg" alt="Projeto 1 - Foto 5">
+        <div class="carousel-text">
+          <h2>Glorioso Eterno</h2>
+        </div>
+      </div>
+      <!-- Imagem 6 -->
+      <div class="carousel-item">
+        <img src="Imagens/Glorioso Eterno Fotos/4.jpg" alt="Projeto 1 - Foto 6">
+        <div class="carousel-text">
+          <h2>Glorioso Eterno</h2>
+        </div>
+      </div>
+      <!-- Imagem 7 -->
+      <div class="carousel-item">
+        <img src="Imagens/1943 Fotos/3.jpg" alt="Projeto 1 - Foto 7">
+        <div class="carousel-text">
+          <h2>1943</h2>
+        </div>
+      </div>
+      <!-- Imagem 8 -->
+      <div class="carousel-item">
+        <img src="Imagens/Glorioso Eterno Fotos/5.jpg" alt="Projeto 1 - Foto 8">
+        <div class="carousel-text">
+          <h2>Glorioso Eterno</h2>
+        </div>
       </div>
     </div>
 
     <!-- Setas de Navegação -->
-    <button class="arrow prev" onclick="prevProject()">&#10094;</button>
-    <button class="arrow next" onclick="nextProject()">&#10095;</button>
+    <button class="arrow prev" onclick="prevImage()">&#10094;</button>
+    <button class="arrow next" onclick="nextImage()">&#10095;</button>
   </div>
 </section>
 
@@ -104,6 +140,14 @@
       <div class="service-item reveal">
         <h3>Vídeos Institucionais</h3>
         <p>Conte a história da sua empresa de forma impactante.</p>
+      </div>
+      <div class="service-item reveal">
+        <h3>Comerciais</h3>
+        <p>Criação de comerciais para TV e redes sociais.</p>
+      </div>
+      <div class="service-item reveal">
+        <h3>Comerciais</h3>
+        <p>Criação de comerciais para TV e redes sociais.</p>
       </div>
       <div class="service-item reveal">
         <h3>Comerciais</h3>
@@ -128,7 +172,7 @@
   <!-- Links para Redes Sociais e E-mail -->
   <div class="social-title">
 
-    <h1>Siga a Quadro nas Redes agora</h1>
+    <h1>Siga a Quadro nas Redes</h1>
   </div>
   <div class="social-links">
     <a href="https://www.youtube.com/@quadroprod" target="_blank" class="social-icon">
