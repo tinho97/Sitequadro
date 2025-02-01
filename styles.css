@@ -50,7 +50,7 @@
   /* Seção Hero */
   .hero {
     height: 100vh;
-    background: url('Imagens/46-IMG_8727.jpg') no-repeat center center/cover;
+    background: url('Imagens/Hero\ Image.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
