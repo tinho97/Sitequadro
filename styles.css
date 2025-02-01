@@ -62,7 +62,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  color: #ff6b6b;
+  color: #ce7807;
 }
 
 /* Estilo para Dispositivos Móveis */
@@ -122,7 +122,7 @@ nav .nav-links li {
 }
 
 .hero .btn {
-  background: #ff6b6b;
+  background: #ce7807;
   color: #fff;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
@@ -139,12 +139,12 @@ nav .nav-links li {
 
 .hero .btn:hover {
   transform: scale(1.05);
-  background: #ff4c4c;
+  background: #ce7807;
 }
 
 .hero .btn-secondary:hover {
   transform: scale(1.05);
-  border-color: #ff6b6b;
+  border-color: #ce7807;
 }
 
 /* Ajustes para Dispositivos Móveis */
