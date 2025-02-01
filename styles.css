@@ -96,7 +96,7 @@ nav .nav-links li {
 /* Estilo da Seção Hero */
 .hero {
   height: 100vh; /* Ocupa toda a altura da tela */
-  background: url('hero-bg.jpg') no-repeat center center/cover;
+  background: url('Imagens/Hero\ Image.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,13 +115,18 @@ nav .nav-links li {
   margin-bottom: 2rem;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-direction: row; /* Botões lado a lado por padrão */
+  gap: 1rem; /* Espaço entre os botões */
+}
+
 .hero .btn {
   background: #ff6b6b;
   color: #fff;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
-  margin-right: 1rem;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -158,14 +163,21 @@ nav .nav-links li {
     margin-bottom: 1.5rem;
   }
 
+  .hero-buttons {
+    flex-direction: column; /* Botões um em cima do outro */
+    gap: 0.5rem; /* Menos espaço entre os botões */
+  }
+
   .hero .btn {
-    padding: 0.8rem 1.2rem; /* Botões menores em dispositivos móveis */
+    width: 100%; /* Botões ocupam toda a largura */
+    padding: 0.8rem; /* Padding ajustado */
     font-size: 0.9rem;
-    margin-right: 0.5rem; /* Menos espaço entre os botões */
+    margin-right: 0; /* Remove a margem direita */
   }
 
   .hero .btn-secondary {
-    padding: 0.8rem 1.2rem; /* Botões menores em dispositivos móveis */
+    width: 100%; /* Botões ocupam toda a largura */
+    padding: 0.8rem; /* Padding ajustado */
     font-size: 0.9rem;
   }
 }
