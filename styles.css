@@ -93,19 +93,20 @@ nav .nav-links li {
 }
 }
 
-/* Seção Hero */
+/* Estilo da Seção Hero */
 .hero {
-  height: 100vh;
-  background: url('Imagens/Hero\ Image.jpg') no-repeat center center/cover;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  background: url('hero-bg.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
+  padding: 0 1rem; /* Adiciona padding lateral para evitar colisão com as bordas */
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Tamanho maior para desktop */
   margin-bottom: 1rem;
 }
 
@@ -115,20 +116,58 @@ nav .nav-links li {
 }
 
 .hero .btn {
-  background: #ed820e;
+  background: #ff6b6b;
   color: #fff;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
   margin-right: 1rem;
-  transition: transform 0.3s ease, background 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .hero .btn-secondary {
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  transition: transform 0.3s ease, border-color 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  background: #ff4c4c;
+}
+
+.hero .btn-secondary:hover {
+  transform: scale(1.05);
+  border-color: #ff6b6b;
+}
+
+/* Ajustes para Dispositivos Móveis */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh; /* Altura menor em dispositivos móveis */
+    padding: 0 1rem; /* Padding lateral para evitar colisão com as bordas */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Título menor em dispositivos móveis */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Texto menor em dispositivos móveis */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .btn {
+    padding: 0.8rem 1.2rem; /* Botões menores em dispositivos móveis */
+    font-size: 0.9rem;
+    margin-right: 0.5rem; /* Menos espaço entre os botões */
+  }
+
+  .hero .btn-secondary {
+    padding: 0.8rem 1.2rem; /* Botões menores em dispositivos móveis */
+    font-size: 0.9rem;
+  }
 }
 
 /* Efeito de Crescimento ao Passar o Mouse */
