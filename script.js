@@ -1,11 +1,8 @@
 // Menu de Navegação Responsivo
-const navToggle = document.createElement('div');
-navToggle.classList.add('nav-toggle');
-navToggle.innerHTML = '&#9776;'; // Ícone de menu
-document.querySelector('nav').appendChild(navToggle);
+const menuIcon = document.getElementById('menuIcon');
+const navLinks = document.getElementById('navLinks');
 
-const navLinks = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => {
+menuIcon.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
@@ -29,43 +26,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Variáveis globais
-let currentProjectIndex = 0;
-const projects = document.querySelectorAll('.project');
-const project1Images = document.querySelectorAll('#project1 .carousel-images img');
-const project2Images = document.querySelectorAll('#project2 .carousel-images img');
 let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel-item');
 
 // Função para trocar as imagens do carrossel
-function changeImage(images) {
-  images[currentImageIndex].classList.remove('active'); // Remove a classe 'active' da imagem atual
-  currentImageIndex = (currentImageIndex + 1) % images.length; // Avança para a próxima imagem (ou volta ao início)
-  images[currentImageIndex].classList.add('active'); // Adiciona a classe 'active' à nova imagem
+function changeImage() {
+  // Remove a classe 'active' da imagem atual
+  images[currentImageIndex].classList.remove('active');
+
+  // Avança para a próxima imagem (ou volta ao início se for a última)
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+
+  // Adiciona a classe 'active' à nova imagem
+  images[currentImageIndex].classList.add('active');
 }
 
 // Inicia o carrossel automático
-function startCarousel(images) {
-  setInterval(() => changeImage(images), 5000); // Troca a imagem a cada 5 segundos
+function startCarousel() {
+  setInterval(changeImage, 5000); // Troca a imagem a cada 5 segundos
 }
 
-// Navega para o próximo projeto
-function nextProject() {
-  projects[currentProjectIndex].classList.remove('active');
-  currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-  projects[currentProjectIndex].classList.add('active');
-  currentImageIndex = 0; // Reinicia o índice da imagem ao mudar de projeto
+// Navega para a imagem anterior
+function prevImage() {
+  images[currentImageIndex].classList.remove('active');
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  images[currentImageIndex].classList.add('active');
 }
 
-// Navega para o projeto anterior
-function prevProject() {
-  projects[currentProjectIndex].classList.remove('active');
-  currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
-  projects[currentProjectIndex].classList.add('active');
-  currentImageIndex = 0; // Reinicia o índice da imagem ao mudar de projeto
+// Navega para a próxima imagem
+function nextImage() {
+  images[currentImageIndex].classList.remove('active');
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].classList.add('active');
 }
 
-// Inicializa os carrosséis
-startCarousel(project1Images);
-startCarousel(project2Images);
+// Inicializa o carrossel
+startCarousel();
 
 // Validação de Formulário
 const contactForm = document.querySelector('.contact form');
