@@ -203,8 +203,8 @@ h2 {
   justify-content: center; /* Centraliza os itens na linha principal */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* Para suavidade em dispositivos móveis */
-  gap: 2rem;
-  padding: 1rem; /* Adiciona padding para espaçamento */
+  gap: 0.25rem;
+  padding: 0.25rem; /* Adiciona padding para espaçamento */
 }
 
 .team-member {
