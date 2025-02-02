@@ -408,7 +408,7 @@ h2 {
 }
 
 .service-item {
-  background: #f4f4f4;
+  background: #ed810e7a;
   padding: 1.5rem;
   border-radius: 10px;
   min-width: 250px; /* Largura mínima dos itens para garantir a rolagem */
