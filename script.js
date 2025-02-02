@@ -25,6 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
 // Variáveis globais
 let currentImageIndex = 0;
 const images = document.querySelectorAll('.carousel-item');
