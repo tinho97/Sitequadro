@@ -10,7 +10,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #333;
+  overflow-x: hidden;
+  width: 100%;
   background-image: linear-gradient(to top, #E4E2E1 50%, #ce7807);
+}
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Logotipo */
@@ -200,26 +207,27 @@ h2 {
 /* Sobre Nós */
 .about .team {
   display: flex;
-  justify-content: center; /* Centraliza os itens na linha principal */
+  justify-content: center;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Para suavidade em dispositivos móveis */
-  gap: 0.25rem;
-  padding: 0.25rem; /* Adiciona padding para espaçamento */
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  scroll-padding: 0.25rem;
+  scroll-snap-type: x mandatory;
 }
 
 .team-member {
-  min-width: 150px; /* Largura mínima dos itens para garantir a rolagem */
-  flex: 0 0 auto; /* Evita que os itens se comprimam */
+  min-width: 120px;
+  flex: 0 0 auto;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .team-member img {
-  width: 150px; /* Largura fixa para as imagens */
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-
 
 
 
@@ -487,6 +495,8 @@ footer {
   flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .grid-container {
