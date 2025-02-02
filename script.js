@@ -25,6 +25,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+//Carrossel Sobre Nós
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.team-member');
+const indicators = document.querySelectorAll('.indicator');
+const intervalTime = 3000; // Tempo de transição em milissegundos (3 segundos)
+
+function showSlide(index) {
+  // Oculta todos os slides
+  slides.forEach((slide) => slide.classList.remove('active'));
+  // Mostra o slide atual
+  slides[index].classList.add('active');
+
+  // Atualiza os indicadores
+  indicators.forEach((indicator, i) => {
+    if (i === index) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide++;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
+
+// Inicia a transição automática
+let slideInterval = setInterval(nextSlide, intervalTime);
+
+// Pausa a transição automática ao passar o mouse sobre o carrossel
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+// Retoma a transição automática ao retirar o mouse do carrossel
+carousel.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(nextSlide, intervalTime);
+});
+
+// Inicializa o primeiro slide
+showSlide(currentSlide);
+
 
 // Variáveis globais
 let currentImageIndex = 0;

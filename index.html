@@ -29,41 +29,50 @@
   </nav>
 
   <!-- Seção Hero -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <picture style="padding-left: 2px;">
-        <source media="(max-width:768px)" srcset="Imagens/logo 150px.png" type="image/png">
-        <img src="Imagens/logo 300px.png" alt="logo quadro">
-      </picture>
-      <h1 class="logotipo">QUADRO</h1>
-      <h2>Criamos histórias que emocionam e conectam você</h2>
-      <p>Produtora audiovisual independente na Zona Norte do Rio de Janeiro</p>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <picture>
+      <source media="(max-width:768px)" srcset="Imagens/logo 150px.png" type="image/png">
+      <img src="Imagens/logo 300px.png" alt="logo quadro" class="hero-logo">
+    </picture>
+    <h1 class="logotipo">QUADRO</h1>
+    <h2>Criamos histórias que emocionam e conectam você</h2>
+    <p>Produtora audiovisual independente na Zona Norte do Rio de Janeiro</p>
+    <div class="hero-buttons">
       <a href="#portfolio" class="btn">Conheça nossos projetos</a>
       <a href="#contact" class="btn btn-secondary">Solicite um orçamento</a>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- Seção Sobre Nós -->
-<section id="about" class="about">
-  <h2 class="reveal">Sobre Nós</h2>
-  <p class="reveal">Somos uma produtora audiovisual independente do Rio de Janeiro com a missão de transmitir, por meio da imagem, o sentimento. Com uma equipe apaixonada por contar histórias, ajudamos marcas e pessoas a se conectarem com seu público através de vídeos criativos e impactantes.</p>
-  <div class="team">
-    <div class="team-member reveal">
-      <img src="Imagens/Equipe/Victor.png" alt="Membro da Equipe 1">
-      <h3>Victor Figueiredo</h3>
-      <p>Diretor Criativo</p>
+<section class="about">
+  <h2>Sobre Nós</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab non cupiditate cumque ipsa ratione quasi optio totam asperiores, corporis ullam, quidem accusantium eligendi maxime vel excepturi perspiciatis dicta voluptatibus modi?</p>
+  <br>
+  <div class="carousele">
+    <div class="team">
+      <div class="team-member active">
+        <img src="Imagens/Equipe/Victor.png" alt="Membro 1">
+        <h3>Victor Figueiredo</h3>
+        <p>Editor</p>
+      </div>
+      <div class="team-member">
+        <img src="Imagens/Equipe/Guima.png" alt="Membro 2">
+        <h3>Rômulo Guimarães</h3>
+        <p>Fotógrafo</p>
+      </div>
+      <div class="team-member">
+        <img src="Imagens/Equipe/Vila.png" alt="Membro 3">
+        <h3>Lucas Vilarinho</h3>
+        <p>Fotógrafo</p>
+      </div>
     </div>
-    <div class="team-member reveal">
-      <img src="Imagens/Equipe/Vila.png" alt="Membro da Equipe 2">
-      <h3>Lucas Vilarinho</h3>
-      <p>Produtor Executiva</p>
-    </div>
-    <div class="team-member reveal">
-      <img src="Imagens/Equipe/Guima.png" alt="Membro da Equipe 2">
-      <h3>Rômulo Guimarães</h3>
-      <p>Produtor Executiva</p>
-    </div>
-    <!-- Adicione mais membros conforme necessário -->
+  </div>
+  <div class="indicators">
+    <span class="indicator active" onclick="goToSlide(0)"></span>
+    <span class="indicator" onclick="goToSlide(1)"></span>
+    <span class="indicator" onclick="goToSlide(2)"></span>
   </div>
 </section>
 
@@ -152,10 +161,6 @@
       <div class="service-item reveal">
         <h3>Edição de Vídeo</h3>
         <p>Edição profissional para seus projetos audiovisuais.</p>
-      </div>
-      <div class="service-item reveal">
-        <h3>Motion Design</h3>
-        <p>Animações gráficas para engajar seu público.</p>
       </div>
     </div>
   </section>
