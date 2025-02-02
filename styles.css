@@ -25,6 +25,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: #333;
+  padding: 0.5rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -42,6 +43,7 @@ nav .menu-icon {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-right: 1rem; /* Afasta o ícone da borda da tela */
 }
 
 nav .nav-links {
@@ -66,31 +68,31 @@ nav .nav-links a:hover {
 }
 
 /* Estilo para Dispositivos Móveis */
-@media screen and (max-width: 768px) {
-nav .menu-icon {
-  display: block; /* Mostra o ícone do menu em telas menores */
-}
+@media (max-width: 768px) {
+  nav .menu-icon {
+    display: block; /* Mostra o ícone do menu em telas menores */
+  }
 
-nav .nav-links {
-  position: absolute;
-  top: 60px; /* Ajuste conforme a altura do menu */
-  right: 0;
-  background: #333;
-  flex-direction: column;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
-}
+  nav .nav-links {
+    position: absolute;
+    top: 60px; /* Ajuste conforme a altura do menu */
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
 
-nav .nav-links.active {
-  height: 200px; /* Altura do menu expandido */
-}
+  nav .nav-links.active {
+    height: 200px; /* Altura do menu expandido */
+  }
 
-nav .nav-links li {
-  margin: 1rem 0;
-  text-align: center;
-}
+  nav .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
 }
 
 /* Estilo da Seção Hero */
