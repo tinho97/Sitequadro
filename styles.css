@@ -437,27 +437,6 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 1rem 0;
-  }
-}
-
 /* Botão de Voltar ao Topo */
 .back-to-top {
   display: none;
@@ -474,67 +453,6 @@ footer {
   cursor: pointer;
   z-index: 1000;
 }
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem; /* Título menor em dispositivos móveis */
-  }
-  h2 {
-    font-size: 1.8rem; /* Subtítulos menores */
-  }
-  p {
-    font-size: 1rem; /* Texto legível */
-  }
-}
-@media (max-width: 768px) {
-  section {
-    padding: 2rem 1rem; /* Menos espaço interno */
-  }
-}
-@media (max-width: 768px) {
-  .gallery {
-      flex-direction: column; /* Uma coluna em dispositivos móveis */
-  }
-  .gallery-item {
-      width: 100%; /* Ocupa toda a largura */
-  }
-}
-@media (max-width: 768px) {
-  .btn {
-      padding: 1rem 2rem; /* Botões maiores */
-      font-size: 1rem;
-  }
-}
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2rem;
-  }
-  h2 {
-      font-size: 1.8rem;
-  }
-  p {
-      font-size: 1rem;
-  }
-  section {
-      padding: 2rem 1rem;
-  }
-  .hero-content {
-    padding: 0 1rem; /* Ajuste para o conteúdo do hero */
-  }
-      .gallery {
-          flex-direction: column;
-      }
-      .gallery-item {
-          width: 100%;
-      }
-      .btn {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-      }
-      input, textarea {
-        font-size: 16px; /* Tamanho mínimo para evitar zoom */
-      }
-  }
   
   /* Animação de revelação */
 .reveal {
