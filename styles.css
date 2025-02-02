@@ -119,8 +119,23 @@ nav .nav-links a:hover {
   padding: 0 1rem;
 }
 
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
 .hero-content h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -167,36 +182,36 @@ nav .nav-links a:hover {
     height: 80vh;
   }
 
+  .hero-logo {
+    width: 150px; /* Define o tamanho da imagem para mobile */
+  }
+
   .hero-content h1 {
     font-size: 1.5rem;
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .hero-content p {
     font-size: 1rem;
-
   }
 
   .hero-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: column; /* Botões um em cima do outro */
+    gap: 0.5rem; /* Espaçamento entre os botões */
+    width: 100%; /* Garante que o container ocupe toda a largura */
   }
 
-  .hero .btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-
+  .hero .btn,
   .hero .btn-secondary {
-    width: 100%;
+    width: 100%; /* Botões ocupam toda a largura disponível */
     padding: 0.8rem;
     font-size: 0.9rem;
   }
 }
+
 
 /* Seções comuns */
 section {
@@ -396,20 +411,18 @@ h2 {
   background: #f4f4f4;
   padding: 1.5rem;
   border-radius: 10px;
-  min-width: 300px; /* Largura mínima dos itens para garantir a rolagem */
+  min-width: 250px; /* Largura mínima dos itens para garantir a rolagem */
   flex: 0 0 auto; /* Evita que os itens se comprimam */
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
   .service-list {
-    gap: 1rem; /* Reduz o espaçamento entre os itens */
-    padding: 0.5rem; /* Reduz o padding do container */
+    max-width: 300px;
   }
 
   .service-item {
-    min-width: 250px; /* Reduz a largura mínima dos itens */
-    padding: 1rem; /* Reduz o padding interno */
+    max-width: 150px; /* Reduz a largura mínima dos itens */
   }
 
   .service-item h3 {
