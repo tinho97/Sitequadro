@@ -212,7 +212,6 @@ nav .nav-links a:hover {
   }
 }
 
-
 /* Seções comuns */
 section {
   padding: 4rem 1rem;
@@ -225,15 +224,13 @@ h2 {
 }
 
 /* Sobre Nós */
-
-/* Estilos gerais */
 .about {
   text-align: center;
   padding: 2rem 3rem;
   gap: 1rem;
 }
 
-.carousele  {
+.carousele {
   position: relative;
   display: flex;
   align-items: center;
@@ -438,6 +435,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
     transition: all 0.3s ease; /* Suaviza a transição */
   }
+}
 
 /* Estilo da Seção de Contato */
 .contact {
@@ -446,6 +444,7 @@ h2 {
 }
 
 .contact form {
+  max-width: 600px; /* Limita a largura do formulário */
   width: 100%;
   padding: 1rem;
   margin: 0 auto;
@@ -509,18 +508,45 @@ h2 {
   transform: translateY(5px);
 }
 
-.social-title {
-  margin-top: 4rem;
-  font-size: 1.5rem;
-}
-
 /* Rodapé */
 footer {
   background: #333;
   color: #fff;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: auto;
+}
+
+/* Ajustes para telas maiores (acima de 768px) */
+@media (min-width: 768px) {
+  .contact {
+    padding: 4rem 1rem; /* Aumenta o padding para telas maiores */
+  }
+
+  .contact form {
+    max-width: 800px; /* Aumenta a largura máxima do formulário */
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+  }
+
+  .contact button {
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte dos botões */
+  }
+
+  .social-links {
+    gap: 3rem; /* Aumenta o espaçamento entre os ícones */
+  }
+
+  .social-icon {
+    font-size: 2.5rem; /* Aumenta o tamanho dos ícones */
+  }
+
+  .social-icon span {
+    font-size: 1rem; /* Aumenta o tamanho da fonte dos textos */
+  }
 }
 
 /* Botão de Voltar ao Topo */
@@ -582,5 +608,4 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta as colunas de acordo com o espaço disponível */
   gap: 1rem;
-}
 }
