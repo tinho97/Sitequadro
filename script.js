@@ -117,6 +117,28 @@ function nextImage() {
 // Inicializa o carrossel
 startCarousel();
 
+//Serviços
+
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceItems = document.querySelectorAll('.service-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, {
+    threshold: 0.1 // Ajuste o threshold conforme necessário
+  });
+
+  serviceItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+
+
+
 // Validação de Formulário
 const contactForm = document.querySelector('.contact form');
 contactForm.addEventListener('submit', function (e) {
