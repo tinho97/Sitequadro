@@ -107,6 +107,6 @@ function handleSubmit(event) {
     // Redireciona para o WhatsApp
     const text = `Olá, meu nome é ${name} (${email}). ${message}`;
     const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/+5521991444917?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/++5521970217713?text=${encodedText}`, '_blank');
   }
 }
