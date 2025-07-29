@@ -12,7 +12,7 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   width: 100%;
-  background-color: #000000;
+  background-color: #161616;
 }
 
 img, iframe, video {
@@ -155,34 +155,34 @@ nav .nav-links a:hover {
   flex-direction: column;
   gap: 1rem;
   
-  
 }
 
 .hero .btn {
-  background: #d16002;
+  background-image:radial-gradient(#202020 60%, #000000); 
   color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
   transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 8px 8px 15px #292929;
 }
 
 .hero .btn-secondary {
-  background: transparent;
-  border: 2px solid #fff;
+  background-image:radial-gradient(#202020 60%, #000000); 
   color: #fff;
   text-shadow: 2px 4px 5px #00000080;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 8px 8px 15px #292929;
 }
 
 .hero .btn:hover {
   transform: scale(1.05);
-  background: #d16002;
+  background-image:radial-gradient(#202020 60%, #000000);  
 }
 
 .hero .btn-secondary:hover {
   transform: scale(1.05);
-  border-color: #d16002;
+  background-image:radial-gradient(#202020 60%, #000000); 
 }
 
 /* Ajustes para Dispositivos Móveis */
@@ -223,8 +223,7 @@ nav .nav-links a:hover {
 
 /* Seções comuns */
 section {
-  padding: 4rem 1rem;
-  text-align: center;
+  padding: 6rem 1rem;
 }
 
 h2 {
@@ -296,7 +295,7 @@ h2 {
 .carousel {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 8px 10px 8px #00000080;
@@ -355,15 +354,14 @@ h2 {
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background: none;
   color: #fff;
   border: none;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   z-index: 1000;
-  transition: background 0.3s ease;
+  transition: transform scale 0.3s ease;
 }
 
 .arrow.prev {
@@ -375,7 +373,8 @@ h2 {
 }
 
 .arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
+transform: scale(1.25);
+transition: 0.5s ease;
 }
 
 /* Ajustes para Dispositivos Móveis */
@@ -405,71 +404,95 @@ h2 {
   }
 }
 
-/* Seção de Serviços */
+
+
+/* Estilos da seção de serviços */
 .services {
-  padding: 50px 20px;
-  text-align: center;
+  padding: 20px;
+  position: relative;
 }
+
 
 .service-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 20px;
+  align-items: flex-start; /* Alinha os tópicos à esquerda */
 }
 
 .service-item {
-  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.service-item h3 {
+  font-size: 3rem; /* Triplo do tamanho original */
+  margin-top: 10rem;
+  color: #fff;
+  text-align: left; /* Alinha o texto à esquerda */
+  cursor: pointer; /* Mostra que o texto é clicável */
+  display: inline-block; /* Limita o clique ao tamanho do texto */
+  transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Transições suaves */
+}
+
+.service-item h3:hover {
+  color: #d16002; /* Muda a cor ao passar o mouse */
+  transform: translateX(1rem); /* Deslocamento lateral para a direita */
+  font-size: 3.2rem; /* Aumenta levemente o tamanho */
+}
+
+.service-item p {
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: #cacaca;
+}
+
+/* Estilos da esteira rolante */
+.content-carousel {
+  width: 100%;
+  overflow: hidden; /* Esconde a barra de rolagem */
+  margin-top: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content; /* Ajusta o tamanho ao conteúdo */
+  animation: scroll 30s linear infinite; /* Animação mais lenta para melhor visualização */
+}
+
+.carousel-track img {
+  width: 960px; /* Largura fixa para as imagens */
+  height: 540px; /* Altura fixa para as imagens */
+  object-fit: cover;
   border-radius: 10px;
-  width: 250px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.service-item.reveal {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Começa do início */
+  }
+  100% {
+    transform: translateX(-50%); /* Move as imagens pela metade do comprimento total */
+  }
 }
 
-.service-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Ajustes para dispositivos móveis */
+/* Adaptação para smartphones */
 @media (max-width: 768px) {
-  .service-list {
-    max-width: 768px;
-    align-items: center;
-  }
-
-  .service-item {
-    min-width: 300px; /* Reduz a largura mínima dos itens */
-    padding: auto;
-  }
-
   .service-item h3 {
-    font-size: 1.2rem; /* Reduz o tamanho do título */
+    font-size: 2rem; /* Reduz o tamanho das letras em dispositivos móveis */
   }
 
-  .service-item p {
-    font-size: 0.9rem; /* Reduz o tamanho do texto */
-  }
-
-  .service-item:hover {
-    transform: translateY(-5px); /* Levanta ligeiramente o item */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
-    transition: all 0.3s ease; /* Suaviza a transição */
+  .content-carousel img {
+    width: 480px; /* Reduz o tamanho das imagens em dispositivos móveis */
+    height: 270px;
   }
 }
 
-/* Estilo da Seção de Contato */
-.contact {
-  padding: 2rem 1rem;
-  text-align: center;
-}
+
+
+/* Sessão Contato */
 
 .contact form {
   max-width: 600px; /* Limita a largura do formulário */
@@ -538,10 +561,10 @@ h2 {
 
 /* Rodapé */
 footer {
-  background: #271717;
+  background: #302d2d;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-top: auto;
 }
 

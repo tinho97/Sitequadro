@@ -117,26 +117,45 @@ function nextImage() {
 // Inicializa o carrossel
 startCarousel();
 
+
 //Serviços
 
-document.addEventListener('DOMContentLoaded', function() {
-  const serviceItems = document.querySelectorAll('.service-item');
+// Adiciona interatividade para o efeito de hover no <h3>
+const serviceItems = document.querySelectorAll('.service-item');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal');
-      }
-    });
-  }, {
-    threshold: 0.1 // Ajuste o threshold conforme necessário
+serviceItems.forEach(item => {
+  const h3 = item.querySelector('h3');
+
+  h3.addEventListener('mouseenter', () => {
+    h3.style.color = '#d16002'; // Muda a cor ao passar o mouse
+    h3.style.transform = 'translateX(10px)'; // Deslocamento lateral
+    h3.style.fontSize = '3.2rem'; // Aumenta o tamanho
   });
 
-  serviceItems.forEach(item => {
-    observer.observe(item);
+  h3.addEventListener('mouseleave', () => {
+    h3.style.color = '#fff'; // Volta à cor original
+    h3.style.transform = 'translateX(0)'; // Remove o deslocamento
+    h3.style.fontSize = '3rem'; // Volta ao tamanho original
   });
 });
 
+// Ajusta a animação do carrossel para garantir que todas as imagens passem
+const carouselTracks = document.querySelectorAll('.carousel-track');
+
+carouselTracks.forEach(track => {
+  const images = track.querySelectorAll('img');
+  const totalWidth = Array.from(images).reduce((acc, img) => acc + img.offsetWidth + 10, 0); // Soma a largura de todas as imagens + gaps
+
+  // Duplica as imagens para criar um ciclo infinito
+  track.innerHTML += track.innerHTML;
+
+  // Ajusta a animação para o comprimento total
+  track.style.animationDuration = `${totalWidth / 100}px`; // Ajuste o valor conforme necessário
+});
+
+
+
+//Contato
 
 
 // Validação de Formulário
@@ -192,6 +211,8 @@ function handleSubmit(event) {
   }
 }
 
+
+
 // Botão de Voltar ao Topo
 const backToTopButton = document.createElement('button');
 backToTopButton.classList.add('back-to-top');
@@ -212,6 +233,8 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+
 // Função para animação de revelação
 function revealOnScroll() {
     const reveals = document.querySelectorAll('.reveal');
