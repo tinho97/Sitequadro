@@ -23,6 +23,13 @@ body {
     color: var(--light-text);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .dark-theme {
@@ -44,6 +51,10 @@ a:hover {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.container, .section-container, .nav-container {
+    overflow-x: hidden;
 }
 
 .section {
