@@ -1,211 +1,260 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QUADRO PROD - Zona Norte RJ</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Audiovisual</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- Menu de Navegação -->
-  <nav>
-    <div class="logo">
-      <h1 class="logotipo">QUADRO</h1>
+<body class="dark-theme">
+    
+    <!-- Menu Principal Simplificado -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html">QUADRO</a>
+        </div>
+
+        <!-- Menu Principal -->
+        <ul class="nav-menu">
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#upcoming">Próximos</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+
+        <!-- Hamburguer Mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <div class="menu-icon" id="menuIcon">
-      <span>&#9776;</span> <!-- Ícone de menu hambúrguer -->
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Início</a></li>
-      <li><a href="#about">Sobre Nós</a></li>
-      <li><a href="#portfolio">Nossos Projetos</a></li>
-      <li><a href="#services">Serviços</a></li>
-      <li><a href="#contact">Fale com a Quadro</a></li>
-    </ul>
-  </nav>
-
-  <!-- Seção Hero -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <br>
-    <picture>
-      <source media="(max-width:768px)" srcset="Imagens/logo 150px.png" type="image/png">
-      <img src="Imagens/logo 300px.png" alt="logo quadro" class="hero-logo">
-    </picture>
-    <h1 class="logotipo">QUADRO</h1>
-    <h2>Criamos histórias que emocionam e conectam você</h2>
-    <p>Produtora audiovisual independente na Zona Norte do Rio de Janeiro</p>
-    <div class="hero-buttons">
-      <a href="#portfolio" class="btn">Conheça nossos projetos</a>
-      <a href="#contact" class="btn btn-secondary">Solicite um orçamento</a>
-    </div>
-  </div>
-</section>
-
-<!-- Seção Sobre Nós -->
-<section class="about">
-  <h2>Sobre Nós</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab non cupiditate cumque ipsa ratione quasi optio totam asperiores, corporis ullam, quidem accusantium eligendi maxime vel excepturi perspiciatis dicta voluptatibus modi?</p>
-  <br>
-  <div class="carousele">
-    <div class="team">
-      <div class="team-member active">
-        <img src="Imagens/Equipe/Victor.png" alt="Membro 1">
-        <h3>Victor Figueiredo</h3>
-        <p>Editor</p>
-      </div>
-      <div class="team-member">
-        <img src="Imagens/Equipe/Guima.png" alt="Membro 2">
-        <h3>Rômulo Guimarães</h3>
-        <p>Fotógrafo</p>
-      </div>
-      <div class="team-member">
-        <img src="Imagens/Equipe/Vila.png" alt="Membro 3">
-        <h3>Lucas Vilarinho</h3>
-        <p>Fotógrafo</p>
-      </div>
-    </div>
-  </div>
-  <div class="indicators">
-    <span class="indicator active" onclick="goToSlide(0)"></span>
-    <span class="indicator" onclick="goToSlide(1)"></span>
-    <span class="indicator" onclick="goToSlide(2)"></span>
-  </div>
-</section>
+</nav>
 
 
-<!-- Seção Portfólio -->
-<section id="portfolio" class="portfolio">
-  <div class="carousel reveal">
-    <!-- Imagens do Carrossel -->
-    <div class="carousel-images">
-      <!-- Imagem 1 -->
-      <div class="carousel-item active reveal">
-        <img src="Imagens/Glorioso Eterno Fotos/1.jpg" alt="Projeto 1 - Foto 1">
-        <div class="carousel-text">
-          <h2>Glorioso Eterno</h2>
+
+
+    <!-- Hero Section (Landing Impactante) -->
+    <section class="hero">
+        <div class="hero-video">
+            <!-- Vídeo de fundo autoplay (substitua pelo seu) -->
+            <video autoplay muted loop id="bg-video">
+                <source src="videos/Site Hero video.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
         </div>
-      </div>
-      <!-- Imagem 2 -->
-      <div class="carousel-item">
-        <img src="Imagens/Glorioso Eterno Fotos/2.jpg" alt="Projeto 1 - Foto 2">
-        <div class="carousel-text">
-          <h2>Glorioso Eterno</h2>
-        </div>
-      </div>
-      <!-- Imagem 3 -->
-      <div class="carousel-item">
-        <img src="Imagens/1943 Fotos/1.jpg" alt="Projeto 1 - Foto 3">
-        <div class="carousel-text">
-          <h2>1943</h2>
-        </div>
-      </div>
-       <!-- Imagem 4 -->
-      <div class="carousel-item">
-        <img src="Imagens/1943 Fotos/2.jpg" alt="Projeto 1 - Foto 4">
-        <div class="carousel-text">
-          <h2>1943</h2>
-        </div>
-      </div>
-       <!-- Imagem 5 -->
-      <div class="carousel-item">
-        <img src="Imagens/Glorioso Eterno Fotos/3.jpg" alt="Projeto 1 - Foto 5">
-        <div class="carousel-text">
-          <h2>Glorioso Eterno</h2>
-        </div>
-      </div>
-      <!-- Imagem 6 -->
-      <div class="carousel-item">
-        <img src="Imagens/Glorioso Eterno Fotos/4.jpg" alt="Projeto 1 - Foto 6">
-        <div class="carousel-text">
-          <h2>Glorioso Eterno</h2>
-        </div>
-      </div>
-      <!-- Imagem 7 -->
-      <div class="carousel-item">
-        <img src="Imagens/1943 Fotos/3.jpg" alt="Projeto 1 - Foto 7">
-        <div class="carousel-text">
-          <h2>1943</h2>
-        </div>
-      </div>
-      <!-- Imagem 8 -->
-      <div class="carousel-item">
-        <img src="Imagens/Glorioso Eterno Fotos/5.jpg" alt="Projeto 1 - Foto 8">
-        <div class="carousel-text">
-          <h2>Glorioso Eterno</h2>
-        </div>
-      </div>
-    </div>
+            <div class="hero-scroll-hint">
+                <span data-lang="pt">Saiba mais</span>
+                <span data-lang="en" style="display:none">Learn more</span>
+                <span data-lang="es" style="display:none">Saber más</span>
+            <i class="fas fa-chevron-down"></i>
+            </div>
+    </section>
 
-    <!-- Setas de Navegação -->
-    <button class="arrow prev" onclick="prevImage()">&#10094;</button>
-    <button class="arrow next" onclick="nextImage()">&#10095;</button>
-  </div>
-</section>
+    <!-- Seção de Projetos (Destaque para Libertadores) -->
+    <section id="projects" class="section projects-section">
+        <div class="section-container">
+            <h2 class="section-title" data-lang="pt">NOSSOS PROJETOS</h2>
+            <h2 class="section-title" data-lang="en" style="display:none">OUR PROJECTS</h2>
+            <h2 class="section-title" data-lang="es" style="display:none">NUESTROS PROYECTOS</h2>
+            
+            <!-- Destaque Libertadores -->
+            <div class="featured-project">
+                <h3 data-lang="pt">Final da Libertadores</h3>
+                <h3 data-lang="en" style="display:none">Libertadores Final</h3>
+                <h3 data-lang="es" style="display:none">Final de la Libertadores</h3>
+                <div class="video-container">
+                    <!-- Incorporar vídeo do YouTube -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ns1cuBnYYk0?si=88UzZawFmCDHsyz4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="project-description" data-lang="pt">
+                    Cobertura da emocionante final da Libertadores 2024. Nossa equipe capturou cada momento épico deste evento inesquecível.
+                </p>
+                <p class="project-description" data-lang="en" style="display:none">
+                    Exclusive coverage of the thrilling Libertadores Final. Our team captured every epic moment of this unforgettable event.
+                </p>
+                <p class="project-description" data-lang="es" style="display:none">
+                    Cobertura exclusiva de la emocionante final de la Libertadores. Nuestro equipo capturó cada momento épico de este evento inolvidable.
+                </p>
+            </div>
+            
+            <!-- Grid de Projetos -->
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/IMG_8859.jpg" alt="Projeto 1">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-lang="pt">Ver Projeto</a>
+                            <a href="#" class="view-project" data-lang="en" style="display:none">View Project</a>
+                            <a href="#" class="view-project" data-lang="es" style="display:none">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <h3>Glorioso Eterno</h3>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/276-DSC06798.jpg" alt="Projeto 2">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-lang="pt">Ver Projeto</a>
+                            <a href="#" class="view-project" data-lang="en" style="display:none">View Project</a>
+                            <a href="#" class="view-project" data-lang="es" style="display:none">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <h3>1943</h3>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Neo BXD.jpg" alt="Projeto 3">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-lang="pt">Ver Projeto</a>
+                            <a href="#" class="view-project" data-lang="en" style="display:none">View Project</a>
+                            <a href="#" class="view-project" data-lang="es" style="display:none">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <h3>Show NEO BXD</h3>
+                </div>
+                <!-- Adicione mais projetos conforme necessário -->
+            </div>
+            
+            <a href="projects.html" class="view-all" data-lang="pt">Ver Todos os Projetos</a>
+            <a href="projects.html" class="view-all" data-lang="en" style="display:none">View All Projects</a>
+            <a href="projects.html" class="view-all" data-lang="es" style="display:none">Ver Todos los Proyectos</a>
+        </div>
+    </section>
 
-  <!-- Seção Serviços -->
-  <section id="services" class="services">
-    <h2 class="reveal">Serviços</h2>
-    <div class="service-list">
-      <div class="service-item reveal">
-        <h3>Vídeos Institucionais</h3>
-        <p>Conte a história da sua empresa de forma impactante.</p>
-      </div>
-      <div class="service-item reveal">
-        <h3>Comerciais</h3>
-        <p>Criação de comerciais para TV e redes sociais.</p>
-      </div>
-      <div class="service-item reveal">
-        <h3>Edição de Vídeo</h3>
-        <p>Edição profissional para seus projetos audiovisuais.</p>
-      </div>
-      <div class="service-item reveal">
-        <h3>Ensaios Fotográficos</h3>
-        <p>Imagens para eternizar momentos.</p>
-      </div>
-    </div>
-  </section>
+<!-- NOVA SEÇÃO DE PRÓXIMOS PROJETOS -->
+    <section id="upcoming" class="section upcoming-section">
+        <div class="section-container">
+            <h2 class="section-title" data-lang="pt">PRÓXIMOS PROJETOS</h2>
+            <h2 class="section-title" data-lang="en" style="display:none">UPCOMING PROJECTS</h2>
+            <h2 class="section-title" data-lang="es" style="display:none">PRÓXIMOS PROYECTOS</h2>
+            
+            <div class="upcoming-grid">
+                <!-- Projeto 1 -->
+                <div class="upcoming-card">
+                    <div class="upcoming-image">
+                        <img src="images/Peru_Bandeira.png" alt="Projeto Futuro">
+                    </div>
+                    <div class="upcoming-content">
+                        <h3 data-lang="pt">Final da Libertadores 2025</h3>
+                        <h3 data-lang="en" style="display:none">2025 Copa Libertadores Final</h3>
+                        <h3 data-lang="es" style="display:none">Final de la Copa Libertadores 2025</h3>
+                        <p class="upcoming-date" data-lang="pt">Dezembro 2025</p>
+                        <p class="upcoming-date" data-lang="en" style="display:none">December 2025</p>
+                        <p class="upcoming-date" data-lang="es" style="display:none">Diciembre 2025</p>
+                        <p class="upcoming-description" data-lang="pt">Uma jornada visual pela biodiversidade da floresta amazônica.</p>
+                        <p class="upcoming-description" data-lang="en" style="display:none">A visual journey through Amazon's biodiversity.</p>
+                        <p class="upcoming-description" data-lang="es" style="display:none">Un viaje visual por la biodiversidad del Amazonas.</p>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="upcoming-card">
+                    <div class="upcoming-image">
+                        <img src="images/Fifa World Cup.jpg" alt="Projeto Futuro">
+                    </div>
+                    <div class="upcoming-content">
+                        <h3 data-lang="pt">Copa do Mundo 2026</h3>
+                        <h3 data-lang="en" style="display:none">World Cup 2026</h3>
+                        <h3 data-lang="es" style="display:none">Copa del Mundo 2026</h3>
+                        <p class="upcoming-date" data-lang="pt">Junho 2026</p>
+                        <p class="upcoming-date" data-lang="en" style="display:none">June 2026</p>
+                        <p class="upcoming-date" data-lang="es" style="display:none">Junio 2026</p>
+                        <p class="upcoming-description" data-lang="pt">Cobertura dos jogos da seleção brasileira.</p>
+                        <p class="upcoming-description" data-lang="en" style="display:none">Coverage of Brazilian team matches.</p>
+                        <p class="upcoming-description" data-lang="es" style="display:none">Cobertura de los partidos de Brasil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Seção Contato -->
-<section id="contact" class="contact">
-  <h2>Contato</h2>
-  <form action="https://formspree.io/f/xjkgryjo" method="POST" onsubmit="handleSubmit(event)">
-    <input type="text" name="name" id="name" placeholder="Seu nome" required>
-    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
-    <textarea name="message" id="message" placeholder="Sua mensagem" required></textarea>
-    <button type="submit" name="email">Enviar por E-mail</button>
-    <button type="submit" name="whatsapp">Enviar por WhatsApp</button>
-  </form>
+    <!-- Seção Sobre Nós (Preview) -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <h2 class="section-title" data-lang="pt">SOBRE NÓS</h2>
+            <h2 class="section-title" data-lang="en" style="display:none">ABOUT US</h2>
+            <h2 class="section-title" data-lang="es" style="display:none">SOBRE NOSOTROS</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-lang="pt">
+                        A Quadro é uma produtora audiovisual especializada em criar conteúdo impactante que conta histórias e emociona públicos. Combinamos técnica criativa com tecnologia de ponta para entregar produções memoráveis.
+                    </p>
+                    <p data-lang="en" style="display:none">
+                        Quadro is an audiovisual production company specialized in creating impactful content that tells stories and moves audiences. We combine creative technique with cutting-edge technology to deliver memorable productions.
+                    </p>
+                    <p data-lang="es" style="display:none">
+                        Quadro es una productora audiovisual especializada en crear contenido impactante que cuenta historias y emociona al público. Combinamos técnica creativa con tecnología de vanguardia para entregar producciones memorables.
+                    </p>
+                    <a href="about.html" class="cta-button" data-lang="pt">CONHEÇA NOSSA EQUIPE</a>
+                    <a href="about.html" class="cta-button" data-lang="en" style="display:none">MEET OUR TEAM</a>
+                    <a href="about.html" class="cta-button" data-lang="es" style="display:none">CONOCE NUESTRO EQUIPO</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/Equipe.jpg" alt="Equipe Quadro">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- Seção de Contato (Preview) -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <h2 class="section-title" data-lang="pt">VAMOS CONVERSAR</h2>
+            <h2 class="section-title" data-lang="en" style="display:none">LET'S TALK</h2>
+            <h2 class="section-title" data-lang="es" style="display:none">HABLEMOS</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p data-lang="pt">Pronto para levar seu projeto ao próximo nível?</p>
+                    <p data-lang="en" style="display:none">Ready to take your project to the next level?</p>
+                    <p data-lang="es" style="display:none">¿Listo para llevar tu proyecto al siguiente nivel?</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> quadroprod23@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +55 21 97021-7713</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, Brasil</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/quadroprod" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@quadroprod" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@quadroprod" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xjkgryjo" method="POST" onsubmit="handleSubmit(event)">
+                        <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                        <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+                        <textarea name="message" id="message" placeholder="Sua mensagem" required></textarea>
+                        <button type="submit" name="email">Enviar por E-mail</button>
+                        <button type="submit" name="whatsapp">Enviar por WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Links para Redes Sociais e E-mail -->
-  <div class="social-links">
-    <a href="https://www.youtube.com/@quadroprod" target="_blank" rel="noopener noreferrer" class="social-icon">
-      <i class="fab fa-youtube"></i>
-      <span>Youtube</span>
-    </a>
-    <a href="https://www.instagram.com/quadroprod" target="_blank" rel="noopener noreferrer" class="social-icon">
-      <i class="fab fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
-    <a href="https://www.tiktok.com/@quadroprod" target="_blank" rel="noopener noreferrer" class="social-icon">
-      <i class="fab fa-tiktok"></i>
-      <span>Tiktok</span>
-    </a>
-  </div>
-</section>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 QUADROPROD. Todos os direitos reservados.</p>
+    </footer>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2023 QUADROPROD. Todos os direitos reservados.</p>
-  </footer>
 
-  <!-- Link para o JavaScript -->
-  <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>
